@@ -1,0 +1,58 @@
+:root{
+  --cor_primary: black;
+  --cor_text: black;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1rem;
+}
+
+html{
+  box-sizing: border-box;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: var(--cor_text);
+}
+
+.nav_link{
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.apresentacao{
+  background-color: purple;
+  height: 300px;
+}
+
+.projeto{
+  margin-top: 50px;
+}
+
+.cards{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card{
+  background-color: red;
+  width: 150px;
+  padding: 10px;
+  border-radius: 20px;
+  opacity: 0.5;
+}
+
+.card:hover{
+  opacity: 1;
+}
+
+.rodape{
+  margin-top: 50px;
+  background-color: green;
+  height: 100px;
+}
