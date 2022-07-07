@@ -1,11 +1,12 @@
 :root{
-  --cor_primary: black;
-  --cor_text: black;
+  --cor_primary: white;
+  --cor_text: white;
   font-family: 'Times New Roman', Times, serif;
   font-size: 1rem;
 }
 
 html{
+  background-color: rgb(25, 25, 25);
   box-sizing: border-box;
 }
 
@@ -22,6 +23,8 @@ a{
   display: flex;
   justify-content: flex-end;
   gap: 20px;
+  background-color: rgb(45, 81, 255);
+  padding: 10px;
 }
 
 .apresentacao{
@@ -29,8 +32,14 @@ a{
   height: 300px;
 }
 
+.sobre{
+  margin-top: 50px;
+  background-color: cyan;
+}
+
 .projeto{
   margin-top: 50px;
+  background-color: orange;
 }
 
 .cards{
@@ -39,6 +48,7 @@ a{
   justify-content: center;
   flex-wrap: wrap;
 }
+
 .card{
   background-color: red;
   width: 150px;
@@ -51,8 +61,15 @@ a{
   opacity: 1;
 }
 
+.contato{
+  margin-top: 50px;
+  background-color: rgb(29, 85, 84);
+  height: 100px;
+}
+
 .rodape{
   margin-top: 50px;
   background-color: green;
   height: 100px;
 }
+
