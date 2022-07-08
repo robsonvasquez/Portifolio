@@ -1,75 +1,71 @@
-:root{
-  --cor_primary: white;
-  --cor_text: white;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 1rem;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title> por </title>
+  </head>
+    <body>
+      <header>
+        <nav>
+          <ul class="nav_link">
+            <li>
+              <a href="#projetos">PROJETOS</a>
+            </li>
+            <li>
+              <a href="#sobre">SOBRE</a>
+            </li>
+            <li>
+              <a href="#contato" class="efeito">CONTATO</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="apresentacao">
+          <h1>Apresentação</h1>
+          <div id="apresentacao">
+            <p>Olá,</p> 
+            <p>Me chamo</p>
+            <p>Robson Vasquez.</p>
+          </div>
+        </div>
+        <div id="sobre" class="sobre">
+          <h1>Sobre</h1>
+        </div>
 
-html{
-  background-color: rgb(25, 25, 25);
-  box-sizing: border-box;
-}
+        <div id="projetos" class="projeto">
+          <h1>Projetos</h1>
+          <div class="cards">
+            <div class="card">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/User_icon-cp.svg" alt=""/>
+              <div>
+                <h4> Título</h4>
+                <p>Descrição</p>  
+              </div>            
+            </div>
+            <div class="card">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/User_icon-cp.svg" alt=""/>
+              <div>
+                <h4> Título</h4>
+                <p>Descrição</p>  
+              </div>            
+            </div>
+            <div class="card">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/User_icon-cp.svg" alt=""/>
+              <div>
+                <h4> Título</h4>
+                <p>Descrição</p>  
+              </div>            
+            </div>
+          </div>
+        </div>
 
-ul{
-  list-style: none;
-}
-
-a{
-  text-decoration: none;
-  color: var(--cor_text);
-}
-
-.nav_link{
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px;
-  background-color: rgb(45, 81, 255);
-  padding: 10px;
-}
-
-.apresentacao{
-  background-color: purple;
-  height: 300px;
-}
-
-.sobre{
-  margin-top: 50px;
-  background-color: cyan;
-}
-
-.projeto{
-  margin-top: 50px;
-  background-color: orange;
-}
-
-.cards{
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.card{
-  background-color: red;
-  width: 150px;
-  padding: 10px;
-  border-radius: 20px;
-  opacity: 0.5;
-}
-
-.card:hover{
-  opacity: 1;
-}
-
-.contato{
-  margin-top: 50px;
-  background-color: rgb(29, 85, 84);
-  height: 100px;
-}
-
-.rodape{
-  margin-top: 50px;
-  background-color: green;
-  height: 100px;
-}
-
+        <div id="contato" class="contato">
+          <h1>Contato</h1>
+        </div>
+      </main>
+      <footer class="rodape">
+        <h1>Rodapé</h1>
+      </footer>
+    </body>
+</html>
