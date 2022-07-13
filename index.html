@@ -2,9 +2,13 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
-    <title> por </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <title> Portfolio </title>
   </head>
     <body>
+
       <header>
         <nav>
           <ul class="nav_link">
@@ -15,57 +19,66 @@
               <a href="#sobre">SOBRE</a>
             </li>
             <li>
-              <a href="#contato" class="efeito">CONTATO</a>
+              <a href="#contato" class="btn efeito">CONTATO</a>
             </li>
           </ul>
         </nav>
       </header>
+
       <main>
         <div class="apresentacao">
-          <h1>Apresentação</h1>
-          <div id="apresentacao">
-            <p>Olá,</p> 
-            <p>Me chamo</p>
-            <p>Robson Vasquez.</p>
+          <div class="escrita_efeito">
+            <p>Olá,</p>
+            <p>Meu nome é</p>
+            <p>Robson Vasquez</p>
+            <h1>Desenvolvedor Web...</h1>
           </div>
-        </div>
-        <div id="sobre" class="sobre">
-          <h1>Sobre</h1>
+          <div class="apre_img">
+            <img src="img/algoritmo.png" alt="Algoritmo">
+          </div>
         </div>
 
         <div id="projetos" class="projeto">
           <h1>Projetos</h1>
+          
           <div class="cards">
             <div class="card">
               <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/User_icon-cp.svg" alt=""/>
               <div>
-                <h4> Título</h4>
-                <p>Descrição</p>  
+                <h3>ChatBot</h3>
               </div>            
             </div>
+
             <div class="card">
               <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/User_icon-cp.svg" alt=""/>
               <div>
-                <h4> Título</h4>
-                <p>Descrição</p>  
+                <h3>ChatBot</h3>
               </div>            
             </div>
+
             <div class="card">
               <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/User_icon-cp.svg" alt=""/>
               <div>
-                <h4> Título</h4>
-                <p>Descrição</p>  
+                <h3>ChatBot</h3>
               </div>            
             </div>
+
           </div>
+        </div>
+
+        <div id="sobre" class="sobre">
+          <h1>Sobre</h1>
         </div>
 
         <div id="contato" class="contato">
           <h1>Contato</h1>
         </div>
       </main>
+
       <footer class="rodape">
         <h1>Rodapé</h1>
       </footer>
+
+      <script src="main.js"></script>
     </body>
 </html>
