@@ -64,6 +64,7 @@ nav ul li a{
   padding: 20px;
   font-weight: 800;
   height: 300px;
+  margin-top: 80px;
   margin-bottom: 100px;
   overflow: hidden;
 }
@@ -88,10 +89,6 @@ nav ul li a{
   49% { opacity: 1; }
   50% { opacity: 0; }
   100% { opacity: 0; }
-}
-
-.escrita_efeito span:nth-child(2){
-  background-color: red;
 }
 
 .apre_img img{
