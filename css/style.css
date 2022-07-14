@@ -6,7 +6,7 @@
 }
 
 *{
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 body{
@@ -20,12 +20,17 @@ body{
 nav ul{
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 5px;
   list-style: none;
+  height: 80px;
+  padding: 10px;
+  margin: 10px;
+  
 }
 
 nav ul li{
-  padding: 10px;
+  padding: 20px;
 }
 
 nav ul li a{
@@ -64,16 +69,17 @@ nav ul li a{
   padding: 20px;
   font-weight: 800;
   height: 300px;
-  margin-top: 80px;
+  margin-top: 100px;
   margin-bottom: 100px;
-  overflow: hidden;
 }
 
 .escrita_efeito{
   font-size: 2.5rem;
   margin: 0px 0px 0px 100px;
 }
-
+.escrita_efeito .funcao{
+  color: red;
+}
 .escrita_efeito:after{
   content: '';
   display: inline-block;
@@ -89,6 +95,10 @@ nav ul li a{
   49% { opacity: 1; }
   50% { opacity: 0; }
   100% { opacity: 0; }
+}
+
+.apresentacao .escreve_efeito{
+  margin: 0;
 }
 
 .apre_img img{
