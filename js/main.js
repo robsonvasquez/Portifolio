@@ -1,48 +1,39 @@
-/*let tag = document.querySelector(".escrita_efeito");
-let txt = tag.innerText;
-console.log(txt);
+let tags = document.querySelectorAll(".escreve_efeito");
+//const array_palavra = ["Olá,", "Meu nome é", "Robson Vasquez", "Desenvolvedor Web..."];
+const array_palavra = ["Ooooo", "Mmmm", "Rrrrr", "Ddddd"];
+let index_array = 0;
 let i = 0;
-let c = txt.length;  
-let speed = 250;
+let j = 0;
 
 function escrita_efeito(){
-    if(i <= txt.length){
 
-        document.querySelector(".escrita_efeito").innerText = txt.slice(0, i + 1);
-        i++
+    if(index_array < array_palavra.length && i < array_palavra[index_array].length){
 
-        if(i == txt.length){
-            c = txt.length;
-        }
-        setTimeout(escrita_efeito, speed);
-    }else{
-        document.querySelector(".escrita_efeito").innerText = txt.slice(0, c - 1);
-        c--
+        console.log(array_palavra.length, array_palavra[index_array], i, index_array);
+        
+        tags[index_array].textContent += array_palavra[index_array].charAt(i);
+        i++;
+        j++;
 
-        if(c == 0){
+        if(i == array_palavra[index_array].length && index_array < array_palavra.length){
+            index_array++;
             i = 0;
         }
-        setTimeout(escrita_efeito, speed - i * 2.5);
-    }
-}
 
-escrita_efeito();*/
+        setTimeout(escrita_efeito, 200);
+    }else{
 
-let tag = document.querySelectorAll(".p");
-console.log(tag)
+        if(j > 0){
 
-function escrita_efeito(){
+            console.log("j", j, index_array);
+            
+            console.log(tags[index_array-1].textContent = array_palavra[index_array-1].substring(0, array_palavra[index_array-1] - 1));
+            j--;
+            setTimeout(escrita_efeito, 200);
 
-    for (var i = 0; i < tag.length; ++i) {
-        txt = tag[i].outerHTML;
-        console.log(tag[i].outerHTML);
-
-        if(i <= txt.length){
-            document.querySelector(".e").innerText = txt.slice(0, i + 1);
         }
+        
     }
-
-
 }
 
 escrita_efeito();
