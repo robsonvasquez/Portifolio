@@ -75,17 +75,20 @@ nav ul li a{
 
 .escrita_efeito{
   font-size: 2.5rem;
-  margin: 0px 0px 0px 100px;
 }
-.escrita_efeito .funcao{
+
+.escrita_efeito  h1{
   color: red;
+  font-size: 3rem;
+  margin: 0px;
 }
-.escrita_efeito:after{
+
+.cursor:after{
   content: '';
   display: inline-block;
   background-color: var(--cor_text);
   margin-left: 3px;
-  height: 25px;
+  height: 28px;
   width: 4px;
   animation: cursor 0.8s infinite;
 }
