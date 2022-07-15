@@ -1,39 +1,68 @@
 let tags = document.querySelectorAll(".escreve_efeito");
-//const array_palavra = ["Olá,", "Meu nome é", "Robson Vasquez", "Desenvolvedor Web..."];
-const array_palavra = ["Ooooo", "Mmmm", "Rrrrr", "Ddddd"];
+const array_palavra = ["Olá,", "Meu nome é", "Robson Vasquez", "Desenvolvedor Web..."];
 let index_array = 0;
 let i = 0;
-let j = 0;
+let j = 1;
+let speed = 300;
 
-function escrita_efeito(){
+function escrita_efeito_apresentacao(){
 
     if(index_array < array_palavra.length && i < array_palavra[index_array].length){
-
-        console.log(array_palavra.length, array_palavra[index_array], i, index_array);
         
         tags[index_array].textContent += array_palavra[index_array].charAt(i);
         i++;
-        j++;
 
         if(i == array_palavra[index_array].length && index_array < array_palavra.length){
+
+            if(index_array != array_palavra.length - 1){
+                tags[index_array].classList.remove("cursor");
+            }
+            
             index_array++;
             i = 0;
+
+            if(index_array < array_palavra.length && !tags[index_array].classList.contains("cursor")){
+                tags[index_array].classList.add("cursor");
+            }
         }
 
-        setTimeout(escrita_efeito, 200);
-    }else{
+        setTimeout(escrita_efeito_apresentacao, speed);
+    }else{  
+            i = 999999;
+            j++;
 
-        if(j > 0){
-
-            console.log("j", j, index_array);
+            tags[index_array-1].textContent = array_palavra[index_array-1].substring(0, array_palavra[index_array-1].length - j)
             
-            console.log(tags[index_array-1].textContent = array_palavra[index_array-1].substring(0, array_palavra[index_array-1] - 1));
-            j--;
-            setTimeout(escrita_efeito, 200);
+            if(j == array_palavra[index_array-1].length){
 
-        }
-        
+                tags[index_array-1].classList.remove("cursor");
+                index_array--;   
+                j = 0;
+                
+                if(index_array>0){
+                    tags[index_array-1].classList.add("cursor");
+                }
+
+                if(index_array == 0){
+                    i=0;
+                }
+            }
+
+            setTimeout(escrita_efeito_apresentacao, speed);    
     }
 }
 
-escrita_efeito();
+function scroll_efeito(){
+
+    const window_top = window.pageYOffset;
+    console.log(window_top);
+
+    let tag = document.querySelector(".apresentacao")
+
+    if(window_top < tag.offsetTop)
+        console.log("fff")
+
+
+}
+
+addEventListener('scroll', scroll_efeito);
