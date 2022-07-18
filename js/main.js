@@ -52,17 +52,4 @@ function escrita_efeito_apresentacao(){
     }
 }
 
-function scroll_efeito(){
-
-    const window_top = window.pageYOffset;
-    console.log(window_top);
-
-    let tag = document.querySelector(".apresentacao")
-
-    if(window_top < tag.offsetTop)
-        console.log("fff")
-
-
-}
-
-addEventListener('scroll', scroll_efeito);
+escrita_efeito_apresentacao();
