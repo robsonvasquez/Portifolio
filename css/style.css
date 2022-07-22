@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
-
 :root{
   --cor_background: rgb(0, 0, 0);
   --cor_text: rgb(255, 255, 255)
@@ -7,45 +5,78 @@
 
 *{
   box-sizing: border-box;
+  font-family: 'Courier',serif;
+  scroll-behavior: smooth;
 }
 
 body{
   background-color: var(--cor_background);
-  font-family: 'Courier',serif;
   font-size: 1rem;
   color: var(--cor_text);
   margin: 0;
 }
 
-nav ul{
+nav{
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  position: fixed;
+  background-color:var(--cor_background);
+  width: 100vw;
+  height: 60px;
+  padding: 10px 20px 0 0;
+  z-index:1;
+  box-shadow: 0 1px 10px rgba(187, 187, 181, 0.918);
+}
+
+nav .icon_nav{
+  display: flex;
+  justify-content: center;
   align-items: center;
   gap: 5px;
+  font-size: 2rem;
+  margin-left: 20px;
+}
+
+nav .links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
   list-style: none;
-  height: 80px;
-  padding: 10px;
-  margin: 10px;
-  
+  padding: 5px;
 }
 
-nav ul li{
-  padding: 20px;
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-nav ul li a{
+a{
   text-decoration: none;
   color: var(--cor_text);
+  cursor: pointer;
+}
+
+a:hover{
+  color: rgba(255, 255, 255, 0.747);
 }
 
 .btn{
-  padding: 10px;
+  padding: 5px;
   border: 0.5px solid;
   border-radius: 50px;
+  cursor: pointer;
 }
 
 .btn:hover, .btn:focus {
   color: var(--cor_background);
+}
+
+.btn:active{
+  padding: 4.5px;
+  transition: 1ms;
+  margin-left: 1px;
 }
 
 .efeito{
@@ -61,17 +92,26 @@ nav ul li a{
   background-position: 0;
 }
 
+.bar{
+  display: none;
+  text-align: center;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.bar:active{
+  font-size: 1.9rem;
+}
+
 .apresentacao{
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 10px;
   font-weight: 800;
-  height: 300px;
-  margin-top: 100px;
-  margin-bottom: 200px;
+  height: 100vh;
 }
 
 .escrita_efeito{
@@ -79,7 +119,7 @@ nav ul li a{
 }
 
 .escrita_efeito  h1{
-  color: red;
+  color: rgba(255, 0, 0, 0.973);
   font-size: 3rem;
   margin: 0px;
 }
@@ -105,7 +145,7 @@ nav ul li a{
   margin: 0;
 }
 
-.apre_img img{
+.apresentacao_img img{
   width: 200px;
   height: 200px;
   animation: opacidade 20s linear infinite;
@@ -122,47 +162,250 @@ nav ul li a{
 }
 
 .projeto{
-  margin: 10px;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
   font-size: 1.5rem;
-  text-align: center;
+  height: 100vh;
+  padding: 10px;
 }
 
 .cards{
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 20px;
   flex-wrap: wrap; 
 }
 
 .card{
+  display: flex;
   background-color: rgba(58, 56, 56, 0.849);
-  width: 200px;
-  
+  padding: 5px;
+  width: 500px;
+  height: 200px;
   border-radius: 10px;
   opacity: 0.3;
   transition:0.5s;
+  overflow: hidden;
 }
 
 .card:hover { 
-	transform: translateY(-10px); 
+  transform: translateY(-10px); 
 	box-shadow: 0 6px 50px rgba(172, 172, 171, 0.918);
   opacity: 1;
 }
 
+.card .card_imagem{
+  width: 30vw;
+  height: auto;
+  border-right: solid rgba(255, 255, 255, 0.212) .1px;
+  padding: 5px;
+}
+
+.card .card_imagem img{
+  width: 100%;
+  height: 100%;
+}
+
+.card .descricao{
+  padding: 4px;
+  width: 70vw;
+}
+
+.card .descricao h4{
+  text-align: center;
+  margin: 0;
+}
+
+.card .descricao span{
+  font-size: .8rem;
+}
+
 .sobre{
-  margin-top: 50px;
-  background-color: cyan;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  height: 100vh;
+  padding: 10px;
+}
+
+.sobre span{
+  width: 82vw;
+  text-align: center;
 }
 
 .contato{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
   margin-top: 50px;
-  background-color: rgb(29, 85, 84);
+  font-size: 1.5rem;
+  height: 100vh;
+}
+
+.contato .contato_link{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  width: 500px;
+}
+
+.contato label{
+  font-size: 1.2rem;
+  padding: 5px;
+}
+
+.contato input{
+  margin: 5px;
+  padding: 5px;
+  border: 0px;
+  border-radius:8px;
+}
+.contato textarea{
   height: 100px;
+  margin: 5px;
+  padding: 5px;
+  border: 0px;
+  border-radius:8px;
+}
+
+.contato input:focus, textarea:focus{
+  outline: 0;
+}
+
+.contato button{
+  font-size: 1rem;
+  background-color: transparent;
+  margin: 10px 5px 0px 5px;
+  padding: 5px;
+}
+
+.contato .btn:focus{
+  color: rgb(131, 127, 127);
+  outline-offset: initial;
+}
+
+.contato .icon_contato{
+  font-size: 3rem;
+  padding: 10px;
+  margin: 0;
 }
 
 .rodape{
-  margin-top: 50px;
-  background-color: green;
-  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  margin-top: 100px;
+  padding: 10px;
+}
+
+.rodape .icon_rodape{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 3px;
+  font-size: 1.5rem;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+
+@media (max-width: 600px){
+
+  nav .links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    margin-top: 52px;
+    padding: 0;
+    width: 100vw;
+    height: 0;
+    background-color: var(--cor_background);
+    box-shadow: 0 1px 10px rgba(187, 187, 181, 0.918);
+    visibility: hidden;
+    overflow-y: hidden;
+    transition: .1s;
+  }
+
+  nav.active .links{
+    height: 22vh;
+    visibility: visible;
+  }
+
+  .bar{
+    display: block;
+    color: var(--cor_text);
+    background-color: transparent;
+    padding: none;
+    border: none;
+    outline: none;
+    margin: none;
+  }
+
+  .bar:hover{
+    color: rgba(255, 255, 255, 0.747);
+  }
+
+  .apresentacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    padding: 10px;
+    font-weight: 800;
+    height: 100vh;
+  }
+
+  .escrita_efeito{
+    width: 50vh;
+    font-size: 1.8rem;
+  }
+
+  .apresentacao_img img{
+    display: none;
+  }
+
+  .sobre span{
+    font-size: 1.2rem;
+  }
+
+  .contato .contato_link{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  form{
+    width: 400px;
+  }
+
+  .contato .icon_contato{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 5px;
+    font-size: 3rem;
+    margin: 0;
+  }
 }
