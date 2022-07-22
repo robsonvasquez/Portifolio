@@ -5,13 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/style.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title> Portfolio </title>
   </head>
     <body>
 
       <header>
         <nav>
-          <ul class="nav_link">
+          <ul class="icon_nav">
+            <li>
+              <a href="#"><i class="fa-brands fa-github-square"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+          </ul>
+
+          <button class="bar" aria-label="Abrir menu" aria-haspopup="true" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <ul class="links" role="menu">
             <li>
               <a href="#projetos">PROJETOS</a>
             </li>
@@ -28,12 +43,12 @@
       <main>
         <section class="apresentacao">
           <div class="escrita_efeito">
-            <p class="escreve_efeito cursor"></p>
-            <p class="escreve_efeito"></p>
-            <p class="escreve_efeito"></p>
-            <h1><p class="escreve_efeito"></p></h1>
+            <p class="escreve_efeito cursor">Olá,</p>
+            <p class="escreve_efeito">Meu nome é</p>
+            <p class="escreve_efeito">Robson Vasquez</p>
+            <h1><p class="escreve_efeito">Desenvolvedor Web...</p></h1>
           </div>
-          <div class="apre_img">
+          <div class="apresentacao_img">
             <img src="img/algoritmo.png" alt="Algoritmo">
           </div>
         </section>
@@ -43,23 +58,22 @@
           
           <div class="cards">
             <div class="card">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/User_icon-cp.svg" alt=""/>
-              <div>
+              <div class="card_imagem">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/User_icon-cp.svg" alt=""/>
+              </div>
+              <div class="descricao">
                 <h3>ChatBot</h3>
               </div>            
             </div>
-
             <div class="card">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/User_icon-cp.svg" alt=""/>
-              <div>
-                <h3>ChatBot</h3>
-              </div>            
-            </div>
-
-            <div class="card">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/User_icon-cp.svg" alt=""/>
-              <div>
-                <h3>ChatBot</h3>
+              <div class="card_imagem">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/User_icon-cp.svg" alt="Capa projeto"/>
+              </div>
+              <div class="descricao">
+                <h4>ChatBot</h4>
+                <span>
+                  Lorem 
+                </span>
               </div>            
             </div>
           </div>
@@ -67,17 +81,69 @@
 
         <section id="sobre" class="sobre">
           <h1>Sobre</h1>
+          <span>
+            Olá! Sou estudante de Ciência da Computação e me encontro no final da gradução. Estou
+            na caminha para a construção da minha carreira como desenvolvedor. Ao longo dos útilmos anos
+            venho estudando e me aperfeiçoando no vasto mundo da tecnologia, para sempre estar atualizado.
+            Neste portifólio você vai saber um pouco sobre o que sei fazer e alguns projetos que fiz.
+            Mas a deixa essa conversa acabar por aqui, podemos compartilhar e criar novas experiências.
+            <h4>Me chame para um bate papo!</h4>
+          </span>
         </section>
 
         <section id="contato" class="contato">
           <h1>Contato</h1>
+          <div class="contato_link">
+            <form method="POST">
+
+              <label for="nome">Nome</label>
+              <input type="text" name="nome" id="nome_input" placeholder="Fulano de Tal" required="required">
+
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email_input" placeholder="fulanodetal@gmail.com" required="required">
+
+              <label for="assunto">Assunto</label>
+              <input type="text" name="assunto" id="assunto_input" placeholder="Trabalho" required="required">
+
+              <label for="text">Mensagem</label>
+              <textarea id="mensagem" required></textarea>
+
+              <button type="submit" class="btn efeito">Enviar</button>
+
+            </form>
+
+            <div>
+              <ul class="icon_contato">
+                <li>
+                  <a href="#"><i class="fa-brands fa-github-square"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
       </main>
 
       <footer class="rodape">
-        <h1>Rodapé</h1>
+        <span>© Todos os Diretos Reservados - Robson Vasquez.</span>
+        <ul>
+          <li>
+            <a href="https://www.flaticon.com/br/icones-gratis/algoritmo" title="algoritmo ícones" target="_blank">Créditos Imagem Apresentação</a>
+          </li>
+        </ul>
+        <ul class="icon_rodape">
+          <li>
+            <a href="#"><i class="fa-brands fa-github-square"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </li>
+        </ul>
       </footer>
 
-      <script src="/js/main.js"></script>
+      <script src="/js/efeitos.js"></script>
+      <script src="/js/api.js"></script>
     </body>
 </html>
