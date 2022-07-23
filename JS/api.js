@@ -4,7 +4,8 @@ async function email(){
 
     event.preventDefault();
 
-    const url = "http://localhost:3000/send-email";
+    const url = "https://api-envia-email.herokuapp.com/send-email";
+    //const url = "http://127.0.0.1:4000/send-email"
 
     let data = {
         nome: form.nome.value,
