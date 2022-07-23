@@ -1,10 +1,10 @@
 let form = document.querySelector("form");
 
-async function email(){ 
+async function email(){
+
     event.preventDefault();
 
-    console.log("aqui")
-    const url = "https://jsonplaceholder.typicode.com/posts";
+    const url = "http://localhost:3000/send-email";
 
     let data = {
         nome: form.nome.value,
@@ -22,8 +22,6 @@ async function email(){
     let response = await fetch(request);
     console.log(response)
     console.log(response.status)
-    let dat  = await response.json();
-    console.log(dat)
 
     if(response.ok){
         alert("Email enviado com sucesso!")
@@ -34,4 +32,7 @@ async function email(){
 
 }
 
-form.addEventListener('submit', email);
+document.addEventListener("DOMContentLoaded",function(){
+
+    form.addEventListener('submit', email);
+});

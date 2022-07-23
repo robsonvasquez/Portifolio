@@ -73,7 +73,7 @@ a:hover{
   color: var(--cor_background);
 }
 
-.btn:active{
+.links .btn:active{
   padding: 4.5px;
   transition: 1ms;
   margin-left: 1px;
@@ -258,7 +258,6 @@ a:hover{
   flex-wrap: wrap;
 }
 
-
 form{
   display: flex;
   flex-direction: column;
@@ -299,6 +298,12 @@ form{
 .contato .btn:focus{
   color: rgb(131, 127, 127);
   outline-offset: initial;
+}
+
+.contato .btn:active{
+  padding: 4.5px;
+  transition: 1ms;
+  margin-top: 11px;
 }
 
 .contato .icon_contato{
