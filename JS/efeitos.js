@@ -73,7 +73,6 @@ function toggle_menu(){
     let active = nav.classList.contains("active");
     active ? btn.ariaLabel = "Fechar menu" : btn.ariaLabel = "Abrir menu";
     btn.ariaExpanded = active;
-    
 }
 
 //fim menu hamburger

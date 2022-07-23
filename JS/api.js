@@ -34,6 +34,5 @@ async function email(){
 }
 
 document.addEventListener("DOMContentLoaded",function(){
-
     form.addEventListener('submit', email);
 });
