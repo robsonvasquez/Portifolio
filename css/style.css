@@ -389,6 +389,11 @@ form{
     display: none;
   }
 
+  .card{
+    width: 300px;
+    height: 200px;
+  }
+
   .sobre span{
     font-size: 1.2rem;
   }
@@ -402,7 +407,7 @@ form{
   }
 
   form{
-    width: 400px;
+    width: 300px;
   }
 
   .contato .icon_contato{
