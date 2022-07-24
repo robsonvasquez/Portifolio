@@ -224,6 +224,43 @@ a:hover{
   font-size: .8rem;
 }
 
+.habilidade{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.5rem;
+  padding: 10px;
+  font-weight: 800;
+  height: 100vh;
+}
+
+.habilidade .card_habilidades{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 70%;
+}
+
+.habilidade .card_habilidade{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(58, 56, 56, 0.849);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.habilidade .card_habilidade img{
+  width: 100%;
+  height: 100%;
+}
+
 .sobre{
   display: flex;
   flex-direction: column;
@@ -351,7 +388,7 @@ form{
   }
 
   nav.active .links{
-    height: 22vh;
+    height: 32vh;
     visibility: visible;
   }
 
@@ -381,7 +418,6 @@ form{
   }
 
   .escrita_efeito{
-    width: 50vh;
     font-size: 1.8rem;
   }
 
@@ -421,5 +457,10 @@ form{
     gap: 5px;
     font-size: 3rem;
     margin: 0;
+  }
+
+  .rodape{
+    font-size: 0.65rem;
+
   }
 }
