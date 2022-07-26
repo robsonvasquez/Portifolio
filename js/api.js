@@ -5,7 +5,6 @@ async function email(){
     event.preventDefault();
 
     const url = "https://api-envia-email.herokuapp.com/send-email";
-    //const url = "http://127.0.0.1:4000/send-email"
 
     let data = {
         nome: form.nome.value,
@@ -21,8 +20,6 @@ async function email(){
     });
 
     let response = await fetch(request);
-    console.log(response)
-    console.log(response.status)
 
     if(response.ok){
         alert("Email enviado com sucesso!")
