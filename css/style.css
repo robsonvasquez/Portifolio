@@ -172,56 +172,77 @@ a:hover{
   padding: 10px;
 }
 
-.cards{
+.projeto .cards{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
-  flex-wrap: wrap; 
 }
 
-.card{
+.projeto .card{
   display: flex;
+  gap: 5px;
   background-color: rgba(58, 56, 56, 0.849);
   padding: 5px;
   width: 500px;
   height: 200px;
   border-radius: 10px;
   opacity: 0.3;
-  transition:0.5s;
+  transition:0.8s;
   overflow: hidden;
 }
 
-.card:hover { 
+.projeto .card:hover { 
   transform: translateY(-10px); 
-	box-shadow: 0 6px 50px rgba(172, 172, 171, 0.918);
+	box-shadow: 0 5px 20px rgba(172, 172, 171, 0.918);
   opacity: 1;
 }
 
-.card .card_imagem{
+.projeto .card a{
   width: 30vw;
   height: auto;
   border-right: solid rgba(255, 255, 255, 0.212) .1px;
   padding: 5px;
+  align-self: center;
 }
 
-.card .card_imagem img{
+.projeto .card .card_imagem img{
   width: 100%;
   height: 100%;
 }
 
-.card .descricao{
-  padding: 4px;
+.projeto .card .descricao{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
   width: 70vw;
+  height: 100%;
 }
 
-.card .descricao h4{
+.projeto .card .descricao h4{
   text-align: center;
+  font-size: 1.3rem;
   margin: 0;
 }
 
-.card .descricao span{
+.projeto .card .descricao span{
   font-size: .8rem;
+}
+
+.projeto .card .em_breve{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.projeto .card .em_breve span{
+  border: double 10px;
+  padding: 10px 30px;
 }
 
 .habilidade{
@@ -429,9 +450,18 @@ form{
     font-size: 2rem;
   }
 
-  .card{
+  .projeto .card{
+    font-size: 1rem;
     width: 300px;
-    height: 200px;
+    height: 150px;
+  }
+
+  .projeto .card .descricao span{
+    font-size: .7rem;
+  }
+  
+  .projeto .card .em_breve span{
+    border: double 5px;
   }
 
   .sobre span{
