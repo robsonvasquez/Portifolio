@@ -402,6 +402,7 @@ form{
 @media (max-width: 1040px){
   .projeto, .habilidade, .sobre, .contato{
     height: auto;
+    margin-bottom: 40px;
   }
 }
 
@@ -424,7 +425,7 @@ form{
   }
 
   nav.active .links{
-    height: 32vh;
+    height: 185px;
     visibility: visible;
   }
 
@@ -481,6 +482,10 @@ form{
 
   .sobre span{
     font-size: 1.2rem;
+  }
+
+  .contato{
+    gap: 10px;
   }
 
   .contato .contato_link{
