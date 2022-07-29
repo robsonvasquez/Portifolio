@@ -46,6 +46,10 @@ nav .links{
   padding: 5px;
 }
 
+h1{
+  margin: 0;
+}
+
 ul{
   list-style: none;
   padding: 0;
@@ -166,10 +170,10 @@ a:hover{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   font-size: 1.5rem;
-  height: 100vh;
   padding: 10px;
+  height: 100vh;
 }
 
 .projeto .cards{
@@ -250,10 +254,10 @@ a:hover{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   font-size: 1.5rem;
-  padding: 10px;
   font-weight: 800;
+  padding: 10px;
   height: 100vh;
 }
 
@@ -285,12 +289,12 @@ a:hover{
 .sobre{
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-  height: 100vh;
   padding: 10px;
+  height: 100vh;
 }
 
 .sobre span{
@@ -303,8 +307,9 @@ a:hover{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  gap: 30px;
   font-size: 1.5rem;
+  padding: 10px;
   height: 100vh;
 }
 
@@ -386,6 +391,18 @@ form{
   font-size: 1.5rem;
   margin: 10px 0 0 0;
   padding: 0;
+}
+
+@media (max-width: 1055px){
+  .projeto, .habilidade, .sobre, .contato{
+    scroll-margin-top: 70px;
+  }
+}
+
+@media (max-width: 1040px){
+  .projeto, .habilidade, .sobre, .contato{
+    height: auto;
+  }
 }
 
 @media (max-width: 600px){
