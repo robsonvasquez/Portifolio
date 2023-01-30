@@ -4,7 +4,7 @@ async function email(){
 
     event.preventDefault();
 
-    const url = "https://api-envia-email.herokuapp.com/send-email";
+    const url = "https://sendemail-api-kxim.onrender.com/send-email";
 
     let data = {
         nome: form.nome.value,
