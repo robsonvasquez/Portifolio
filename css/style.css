@@ -46,6 +46,10 @@ nav .links{
   padding: 5px;
 }
 
+h1{
+  margin: 0;
+}
+
 ul{
   list-style: none;
   padding: 0;
@@ -166,62 +170,83 @@ a:hover{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   font-size: 1.5rem;
-  height: 100vh;
   padding: 10px;
+  height: 100vh;
 }
 
-.cards{
+.projeto .cards{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
-  flex-wrap: wrap; 
 }
 
-.card{
+.projeto .card{
   display: flex;
+  gap: 5px;
   background-color: rgba(58, 56, 56, 0.849);
   padding: 5px;
   width: 500px;
   height: 200px;
   border-radius: 10px;
   opacity: 0.3;
-  transition:0.5s;
+  transition:0.8s;
   overflow: hidden;
 }
 
-.card:hover { 
+.projeto .card:hover { 
   transform: translateY(-10px); 
-	box-shadow: 0 6px 50px rgba(172, 172, 171, 0.918);
+	box-shadow: 0 5px 20px rgba(172, 172, 171, 0.918);
   opacity: 1;
 }
 
-.card .card_imagem{
+.projeto .card a{
   width: 30vw;
   height: auto;
   border-right: solid rgba(255, 255, 255, 0.212) .1px;
   padding: 5px;
+  align-self: center;
 }
 
-.card .card_imagem img{
+.projeto .card .card_imagem img{
   width: 100%;
   height: 100%;
 }
 
-.card .descricao{
-  padding: 4px;
+.projeto .card .descricao{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
   width: 70vw;
+  height: 100%;
 }
 
-.card .descricao h4{
+.projeto .card .descricao h4{
   text-align: center;
+  font-size: 1.3rem;
   margin: 0;
 }
 
-.card .descricao span{
+.projeto .card .descricao span{
   font-size: .8rem;
+}
+
+.projeto .card .em_breve{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.projeto .card .em_breve span{
+  border: double 10px;
+  padding: 10px 30px;
 }
 
 .habilidade{
@@ -229,10 +254,10 @@ a:hover{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   font-size: 1.5rem;
-  padding: 10px;
   font-weight: 800;
+  padding: 10px;
   height: 100vh;
 }
 
@@ -264,12 +289,12 @@ a:hover{
 .sobre{
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-  height: 100vh;
   padding: 10px;
+  height: 100vh;
 }
 
 .sobre span{
@@ -282,9 +307,9 @@ a:hover{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  margin-top: 50px;
+  gap: 30px;
   font-size: 1.5rem;
+  padding: 10px;
   height: 100vh;
 }
 
@@ -355,7 +380,6 @@ form{
   justify-content: center;
   align-items: center;
   font-size: 0.75rem;
-  margin-top: 100px;
   padding: 10px;
 }
 
@@ -367,6 +391,19 @@ form{
   font-size: 1.5rem;
   margin: 10px 0 0 0;
   padding: 0;
+}
+
+@media (max-width: 1055px){
+  .projeto, .habilidade, .sobre, .contato{
+    scroll-margin-top: 70px;
+  }
+}
+
+@media (max-width: 1040px){
+  .projeto, .habilidade, .sobre, .contato{
+    height: auto;
+    margin-bottom: 40px;
+  }
 }
 
 @media (max-width: 600px){
@@ -388,7 +425,7 @@ form{
   }
 
   nav.active .links{
-    height: 32vh;
+    height: 185px;
     visibility: visible;
   }
 
@@ -429,13 +466,26 @@ form{
     font-size: 2rem;
   }
 
-  .card{
+  .projeto .card{
+    font-size: 1rem;
     width: 300px;
-    height: 200px;
+    height: 150px;
+  }
+
+  .projeto .card .descricao span{
+    font-size: .7rem;
+  }
+  
+  .projeto .card .em_breve span{
+    border: double 5px;
   }
 
   .sobre span{
     font-size: 1.2rem;
+  }
+
+  .contato{
+    gap: 10px;
   }
 
   .contato .contato_link{
