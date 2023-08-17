@@ -5,7 +5,7 @@ Este projeto foi desenvolvido para apresentar meus conhecimentos de programaçã
 
 #### Foi realizado o deploy do projeto no GitHub pages.
 
-https://robsonvasquez.com/
+https://robsonvasquez.github.io/Portifolio/
 
 ### Tecnologias utilizadas
 
